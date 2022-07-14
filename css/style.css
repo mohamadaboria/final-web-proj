@@ -1,0 +1,1034 @@
+:root {
+    --main-color: #7386D5;
+    --second-color: #76bec8;
+    --third-color: rgb(151, 151, 179);
+    --gray-color: #999;
+    --white-color: #fff;
+}
+
+
+body {
+    /* overflow-y: scroll */
+}
+
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: var(--gray-color);
+}
+
+
+#logo {
+    display: inline-block;
+    height: 100px;
+    transition: all .3s ease;
+    padding: 0 !important;
+
+
+
+}
+
+#logo:hover,
+#logo:active {
+    background: var(--main-color) !important;
+    padding-left: 0;
+}
+
+#logo span {
+    display: block;
+    background-image: url("../images/v2_18.png");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+
+}
+
+.phone-icon {
+    color: red;
+}
+
+.page-item.active .page-link {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.page-link {
+    color: var(--main-color);
+}
+
+.center-nav {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.center-nav svg,
+.center-nav i {
+    margin-right: 8px;
+}
+
+#local-medicine-list {
+    text-align: right;
+    font-size: 18px;
+}
+
+
+#add-medicine-button {
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#add-medicine-style {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    display: inline-block;
+    list-style-type: none;
+
+}
+
+/* #add-medicine-button:hover{
+    background: var(--main-color)
+} */
+
+
+#sofia-photo {
+    position: relative;
+    width: 55px;
+    height: 55px;
+
+}
+
+
+.showing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.showing p {
+    margin-bottom: 0;
+    color: #555;
+}
+
+.showing button {
+    /* background: #cbcbcb; */
+    /* padding: 7px 15px; */
+    /* border: 1px solid #e5e5e5; */
+    font-size: 18px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 30px;
+}
+
+td,
+th {
+    border: 1px solid #000000;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #76bec8;
+}
+
+
+.edit {
+    width: 19px;
+    height: 19px;
+    margin-left: 0px
+}
+
+.delete {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+
+}
+
+
+
+/* .container{
+      float: left;
+      margin-top: 20px;
+      margin-left: 820px;
+      display: flex;
+      flex-wrap: wrap;
+  } */
+
+.box-number {
+    padding: 10px;
+    background-color: rgb(86, 195, 201);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: var(--white-color);
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-left,
+.navbar .nav-right {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navbar .nav-right {
+    justify-content: flex-end;
+    color: var(--gray-color);
+
+}
+
+.navbar .nav-right .logout {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.navbar .nav-left .profile {
+    margin-left: 10px;
+}
+
+.navbar .nav-left .profile span {
+    color: var(--gray-color);
+    font-size: 15px;
+    font-family: inherit;
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: var(--main-color);
+    color: var(--white-color);
+    transition: all 0.3s;
+    min-height: 100vh;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #6d7fcc;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    padding-top: 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+    color: var(--white-color);
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    transition: all .3s ease;
+}
+
+#sidebar ul li a:hover {
+    padding-left: 20px;
+}
+
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: var(--white-color);
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: var(--white-color);
+    background: #6d7fcc;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download {
+    background: var(--white-color);
+    color: #7386D5;
+}
+
+a.article,
+a.article:hover {
+    background: #6d7fcc !important;
+    color: var(--white-color) !important;
+}
+
+
+
+
+
+
+footer {
+    align-content: flex-end;
+    width: 100%;
+    background: var(--main-color);
+    padding: 15px 0;
+    /* 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; */
+}
+
+#footer-add-medicine {
+    position: absolute;
+    align-content: flex-end;
+    margin-top: 600px;
+    width: 1024px;
+    height: 35px;
+    background: rgb(151, 151, 179);
+}
+
+
+
+
+
+.footer.container {
+    display: flex;
+    width: 1024px;
+    height: 35px;
+    color: #0a0a0a;
+    flex-wrap: wrap;
+
+
+}
+
+li a {
+    text-decoration: none;
+
+
+}
+
+.footer-container>ul>.footer-items>li>a {
+    color: var(--white-color);
+    font-size: 14px;
+
+
+}
+
+.footer-container ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+}
+
+.footer-container>ul>.footer-items {
+
+    width: 150px;
+    margin-bottom: 10px;
+    justify-content: flex-start;
+
+
+}
+
+
+/*------------------add medicine---------------*/
+
+#add-medicine-word {
+    float: left;
+    margin-left: 30px;
+}
+
+#local-nav-add-medicine {
+    margin-left: 650px;
+
+}
+
+
+#form-add-medicine {
+    margin: 50px 0 50px 0;
+}
+
+
+.formcontrol {
+    margin-top: 20px;
+    background-color: white;
+}
+
+
+#medicine-name-label {
+    margin-top: 20px;
+}
+
+
+#save {
+    background-color: rgb(77, 202, 77);
+    width: 90px;
+    height: 35px;
+    margin-top: 20px;
+}
+
+
+#clear {
+    background-color: rgb(203, 55, 55);
+    width: 90px;
+    height: 35px;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 0;
+    transition: all 0.3s;
+    margin-bottom: 0;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+
+    #sidebar.active {
+        margin-left: 0;
+    }
+
+    #sidebarCollapse span {
+        display: none;
+    }
+
+    #sofia-photo {
+        /* visibility: hidden; */
+    }
+
+    #my-profile {
+        display: none;
+    }
+
+    #logout {
+        visibility: hidden;
+    }
+
+    #logout-photo {
+        visibility: hidden;
+    }
+
+
+    .navbar .nav-left {
+        width: 30%;
+    }
+
+    .navbar .nav-right {
+        width: 30%;
+    }
+}
+
+
+
+/* Footer */
+.custom-pagination {
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* End Footer */
+
+
+
+.main {
+    height: 300px;
+    background: blue;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+/* medicine-List Page */
+
+.medicine-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.medicine-search .first {
+    border: 3px solid #000;
+    text-decoration: underline;
+    color: var(--main-color);
+    font-size: 20px;
+    background-color: #EBEBEB;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+
+.medicine-search .search {
+    position: relative;
+    width: 85%
+}
+
+.medicine-search svg,
+.medicine-search i {
+    position: absolute;
+    right: 11px;
+    top: 34%;
+    color: #5555;
+}
+
+.medicine-search .search input {
+    background-color: #fff;
+}
+
+.medicine-search .search input:focus {
+    box-shadow: none;
+    border-color: var(--main-color);
+}
+
+.search-search {
+    margin: 15px auto;
+}
+
+.search-search input {
+    font-size: 25px;
+    font-weight: bold;
+    color: #000;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.medicine-small-box-item {
+    background-color: #d3d3d3;
+    padding: 15px 0;
+    min-height: 50px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    text-align: center;
+}
+
+.medicine-small-box-item svg {
+    margin-right: 10px;
+}
+
+
+
+
+
+.medicine-big-box-item {
+    background-color: #d3d3d3;
+    padding: 15px 0 0 0;
+    min-height: 230px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    text-align: center;
+    position: relative;
+}
+
+.medicine-big-box-item .head span {
+    font-weight: bold;
+}
+
+.medicine-big-box-item .head {
+    border-bottom: 1px solid #000;
+    margin-bottom: 15px;
+}
+
+.medicine-big-box-item .body .item {
+    background-color: var(--main-color);
+    color: var(--white-color);
+    margin-bottom: 15px;
+    border-radius: 10px;
+    padding: 15px 10px;
+}
+
+.medicine-big-box-item .body .item span {
+    display: block;
+}
+
+.medicine-big-box-item .body {
+    padding: 0 10px;
+}
+
+.medicine-big-box-item .body .link {
+    color: var(--main-color);
+    font-size: 18px;
+    display: block;
+    margin-bottom: 15px 0;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.medicine-big-box-item .body .link2 {
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    text-align: left;
+}
+
+.medicine-big-box-item .foot {
+    background-color: #a9e370;
+    padding: 15px;
+    border-top: 3px solid var(--main-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.medicine-big-box-item .foot2 {
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+@media(min-width : 767px) {
+    .medicine-23 {
+        min-height: 316px;
+    }
+
+    .medicine-big-box-item2 {
+        min-height: 712px;
+    }
+}
+
+
+/* End medicine-search Page */
+
+
+.last-p {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+
+/************ Start  user page **************************/
+.user-hello p {
+    font-size: 25px;
+    color: #000;
+
+}
+
+.user-hello span {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.medicine-small-box2 .medicine-small-box-item {
+    min-height: 90px;
+}
+
+
+.side-name {
+    font-size: 20px;
+    margin: 25px auto;
+    display: block;
+    padding-left: 15px;
+}
+
+.doctor-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.doctor-info .item {
+    font-size: 20px;
+}
+
+.doctor-info .item:first-child {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.doctor_items_item svg {
+    font-size: 60px;
+
+}
+
+.doctor_items_item {
+    margin-bottom: 25px;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+.doctor-info2 * {
+    margin-top: 15px;
+    font-size: 18px !important;
+    font-weight: normal !important;
+}
+
+.medicine-search2 {
+    position: relative;
+}
+
+.medicine-search .search-box {
+    position: absolute;
+    top: 37px;
+    left: 0;
+    width: 85%;
+    min-height: 300px;
+    border: 1px solid transparent;
+    display: none;
+    z-index: 1;
+}
+
+.medicine-search .search-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.medicine-search .search-box ul li {
+    padding: 10px 15px;
+    background-color: #d5d5d5;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+}
+
+.pharmacies_items {
+    margin: 30px 0;
+}
+
+.pharmacies_items .pharmacies_items_item {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border: 1px solid #555;
+    border-radius: 10px;
+    padding: 15px;
+
+}
+
+.pharmacies_items .pharmacies_items_item svg {
+    color: black;
+}
+
+.pharmacies_items .pharmacies_items_item .icon svg {
+    font-size: 60px;
+}
+
+
+.clalit-pharm-alert {
+    border: 2px solid #0a0a0a;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.clalit-pharm-alert .top {
+    text-align: center;
+    border-bottom: 2px solid #0a0a0a;
+    padding: 15px;
+    background: #EBEBEB;
+    font-size: 18px;
+}
+
+.clalit-pharm-alert .bottom {
+    padding: 20px;
+}
+
+.clalit-pharm-alert .bottom p {
+    color: black;
+}
+
+
+.Generic_substitutes {}
+
+.Generic_substitutes .container {
+    background-color: #fff;
+    border: 2px solid #000;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.Generic_substitutes_item {
+    border: 2px solid #000;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.Generic_substitutes_item svg {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.Generic_substitutes_item span {
+    font-size: 18px;
+}
+
+.foot-click .aspirin {
+    border: 2px solid #000;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    margin: auto;
+    padding: 15px 20px;
+    font-size: 20px;
+
+}
+
+.foot-click .aspirin svg {
+    margin-left: 10px;
+    color: green;
+}
+
+.foot-click .aspirin span {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    display: inline-block;
+    border-radius: 50%;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foot-click .aspirin span span {
+    background-color: #000;
+    width: 15px;
+    height: 15px;
+}
+
+.foot-click .aspirin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.foot-click .reserve {
+    border: 2px solid #000;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    margin: auto;
+    padding: 15px 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    background-color: #cfcfcf;
+    cursor: pointer;
+}
+
+.popup {
+    width: 350px;
+    min-height: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    background-color: #cfcfcf;
+    display: none;
+}
+
+.popup button {
+    background: #cfcfcf;
+    border: 2px solid #000;
+    padding: 8px 20px;
+    cursor: pointer;
+
+}
+
+@media(min-width : 767px) {
+    .popup {
+        width: 500px;
+        min-height: 300px;
+    }
+}
+
+.popup {
+    text-align: center;
+    padding: 20px;
+}
+
+.popup h2 {
+    color: brown;
+    margin-bottom: 20px;
+}
+
+.popup p {
+    line-height: 1.7;
+    color: black;
+
+}
+@media(min-width : 767px) {
+    .my_account {
+        width: 95%;
+    }
+}
+.my_account {
+    padding: 30px;
+    width: 100%;
+    margin: auto;
+    border: 2px solid #555;
+    border-radius: 10px;
+}
+.my_account label {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.my_account input:focus {
+    box-shadow: none !important;
+    outline: none;
+}
+.my_account .row > .col-12  {
+    margin-bottom: 10px;
+}
+
+.my_account .btn-primary {
+    margin: auto;
+    width: 250px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.my_table .custom-heading {
+    text-align: right;
+    font-size: 18px !important;
+}
+
+/************ End user page **************************/
